@@ -1,0 +1,36 @@
+<br>
+<button (click) = "addUser()" class = "btn btn-success btn-lg"> Add new</button>
+<br>
+<br>
+<h2> User List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Name</th>
+            <th> City </th>
+            <th> Address</th>
+            <th> JMBG</th>
+            <th> Phone</th>
+            <th> Account number</th>
+            <th> Account balance</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users" >
+            <td> {{ user.name }} </td>
+            <td> {{ user.city }} </td>
+            <td> {{ user.address }} </td>
+            <td> {{ user.jmbg }} </td>
+            <td> {{ user.phone }} </td>
+            <td> {{ user.accountNumber }} </td>
+            <td> {{ user.accountBalance }} </td>
+            <td>
+                <button (click) = "updateUser(user.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteUser(user.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+

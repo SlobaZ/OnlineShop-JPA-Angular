@@ -1,0 +1,11 @@
+CREATE USER IF NOT EXISTS jwduser IDENTIFIED BY 'pass';
+
+DROP DATABASE IF EXISTS OnlineShopJPAAngular;
+CREATE DATABASE OnlineShopJPAAngular DEFAULT CHARACTER SET utf8;
+
+USE OnlineShopJPAAngular;
+
+GRANT ALL ON OnlineShopJPAAngular.* TO 'jwduser'@'%';
+
+FLUSH PRIVILEGES;
+

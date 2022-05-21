@@ -1,0 +1,25 @@
+
+<br>
+<h2> Shopping List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Sifra</th>
+            <th> Ukupna cena </th>
+            <th> Date & Time</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let shopping of shoppings" >
+            <td> {{ shopping.code }} </td>
+            <td> {{ shopping.totalPrice }} </td>
+            <td> {{ shopping.dateTimeS }} </td>
+            <td>
+                <button (click) = "updateShopping(shopping.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteShopping(shopping.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

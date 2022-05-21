@@ -1,0 +1,17 @@
+<div class="col-md-6 offset-md-3">
+<br>
+    <h3> Create Shopping </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+                 
+        <div class="form-group">
+  		<label for="userId">User</label>
+  			<select class="form-control" id="userId" name="userId" required [(ngModel)] = "shopping.userId" >
+   				 <option *ngFor="let user of users"  [value]="user.id">{{user.name}}</option>
+  			</select>
+		</div>
+        <br>
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
